@@ -16,7 +16,10 @@ int main()
 	cout << "\n" << endl;
 	
 	cout << "From \"No Man is an Island\" by John Donne\n" << endl;
-	cout << "No man is an island,\nEntire of itself,\nEvery man is a piece of the continent,\nA part of the main." << endl;
+	cout << "No man is an island,\n";
+	cout << "Entire of itself, \n";
+	cout << "Every man is a piece of the continent, \n";
+	cout << "A part of the main." << endl;
 
 	cout << "\n" << endl;
 	cout << "From the steam page of Dark Souls 3\n" << endl;
