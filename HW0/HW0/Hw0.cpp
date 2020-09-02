@@ -25,10 +25,10 @@ int main()
 	cout << "From the steam page of Dark Souls 3\n" << endl;
 	cout << "As fires fade and the world falls into ruin, \n";
 	cout << "journey into a universe filled with more colossal enemies and environments.\n";
-	cout << "Players will be immersed into a world of epic atmosphereand darkness through \n";
+	cout << "Players will be immersed into a world of epic atmosphere and darkness through \n";
 	cout << "faster gameplay and amplified combat intensity. Fans and newcomers alike will \n";
-	cout << "get lost in the game hallmark rewarding gameplayand immersive graphics.\n";
-	cout << "Now only embers remain... Prepare yourself once moreand Embrace The Darkness!" << endl;
+	cout << "get lost in the game hallmark rewarding gameplay and immersive graphics.\n";
+	cout << "Now only embers remain... Prepare yourself once more and Embrace The Darkness!" << endl;
 
 	return 0;
 }
