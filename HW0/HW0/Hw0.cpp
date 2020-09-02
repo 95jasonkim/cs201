@@ -14,8 +14,13 @@ int main()
 		cout << "Hello World" << endl;
 	}
 	cout << "\n" << endl;
+	
 	cout << "From \"No Man is an Island\" by John Donne\n" << endl;
 	cout << "No man is an island,\nEntire of itself,\nEvery man is a piece of the continent,\nA part of the main." << endl;
+
+	cout << "\n" << endl;
+	cout << "From the steam page of Dark Souls 3\n" << endl;
+	cout << "As fires fade and the world falls into ruin, journey into a universe filled with more colossal enemies and environments. Players will be immersed into a world of epic atmosphere and darkness through faster gameplay and amplified combat intensity. Fans and newcomers alike will get lost in the game hallmark rewarding gameplay and immersive graphics.Now only embers remain... Prepare yourself once more and Embrace The Darkness!" << endl;
 
 	return 0;
 }
