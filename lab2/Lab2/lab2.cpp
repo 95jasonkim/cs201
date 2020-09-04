@@ -23,8 +23,8 @@ int main()
 	*/
 
 	//Code for 2nd part
-	/*
-	int m, d, y;
+	
+	/*int m, d, y;
 	cout << "Type the month, day, and year of your birthday as integers in that order ";
 	cin >> m >> d >> y;
 
@@ -41,6 +41,6 @@ int main()
 	cout << y << "-";
 	cout << setw(2) << setfill('0') << m << "-";
 	cout << setw(2) << setfill('0') << d << endl;
-
+	
 	return 0;
 }
