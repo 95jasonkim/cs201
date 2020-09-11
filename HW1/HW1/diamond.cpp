@@ -1,6 +1,6 @@
 /*
 Jason Kim
-CS201 HW1
+CS201 HW1 diamond.cpp
 9/11/2020
 */
 #include <iostream>
