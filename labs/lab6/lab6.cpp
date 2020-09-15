@@ -47,8 +47,8 @@ int main()
 {
 	string a = "This is a string";
 	string b = "This is also a string";
-	string c = "This may or may not be a string";
-	string d = "Is this a string? We may never know";
+	string c = "This is a slightly longer string";
+	string d = "abcdefghijklmnopqrstuvwxyz";
 	//stringlength(a); stringlength(b); stringlength(c); stringlength(d);
 	//stringsharp(a); stringsharp(b); stringsharp(c); stringsharp(d);
 	//backwards(a); backwards(b); backwards(c); backwards(d);
