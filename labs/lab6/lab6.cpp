@@ -29,9 +29,18 @@ void stringsharp(string s)
 	cout << endl;
 }
 
+//code for 3rd part printing the string backwards
 void backwards(string s)
 {
-
+	cout << "The string is: " << s << endl;
+	cout << "The string backwards is: ";
+	int z = s.size();
+	for (int i = z - 1; i >= 0; i--)
+	{
+		cout << s[i];
+	}
+	cout << endl;
+		
 }
 
 int main()
@@ -42,7 +51,7 @@ int main()
 	string d = "Is this a string? We may never know";
 	//stringlength(a); stringlength(b); stringlength(c); stringlength(d);
 	//stringsharp(a); stringsharp(b); stringsharp(c); stringsharp(d);
-
+	//backwards(a); backwards(b); backwards(c); backwards(d);
 
 	return 0;
 }
