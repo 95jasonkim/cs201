@@ -80,18 +80,23 @@ void Prompt(vector<string>& names, vector<int>& scores)
 	string n;
 	getline(cin, n);
 	int x = stoi(n);
-	string name;
-	string score;
+	cout << endl;
 	switch (x)
 	{
 	case 1:
+	{
 		InputScores(names, scores);
 		break;
+	}
 	case 2:
+	{
 		Print(names, scores);
 		break;
+	}
 	case 3:
+	{
 		cout << "Enter a name to search: ";
+		string name;
 		getline(cin, name);
 		if (SearchName(name, names) == 1)
 		{
@@ -104,9 +109,29 @@ void Prompt(vector<string>& names, vector<int>& scores)
 		}
 
 		break;
+	}
 	case 4:
-		
+	{
+		vector<string> tempnames = names;
+		vector<int> tempscores = scores;
+		cout << "Enter a score to search: ";
+		string score;
+		getline(cin, score);
+		int sint = stoi(score);
+		while (SearchScore(sint, tempscores) == 1)
+		{
+			vector<int>::iterator itscore = find(tempscores.begin(), tempscores.end(), sint);
+			int index = distance(tempscores.begin(), itscore);
+			cout << tempnames[index] << " has the score of " << tempscores[index] << endl;
+			tempscores.erase(itscore);
+			tempnames.erase(tempnames.begin() + index);
+		}
+		if (SearchScore(sint, scores) == 0)
+		{
+			cout << "ERROR: score not found." << endl;
+		}
 		break;
+	}
 	default:
 		cout << "ERROR: no corresponding action" << endl;
 		break;
