@@ -28,6 +28,19 @@ void InputNames(vector<string>& names)
 	}
 }
 
+bool DoesNameExist(const string& nameToFind, const vector<string>& names)
+{
+	if (find(names.begin(), names.end(), nameToFind) != names.end())
+	{
+		return true;
+	}
+	else return false;
+}
+
+void PrintNames(const vector<string>& names)
+{
+
+}
 
 int main(int argc, char **argv)
 {
@@ -35,6 +48,7 @@ int main(int argc, char **argv)
 	string nameToFind;
 	InputNames(names);
 	
-	DoesNameExist(nameToFind, names);
+
+
 	return 0;
 }
