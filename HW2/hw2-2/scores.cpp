@@ -24,6 +24,15 @@ bool SearchName(const string& nameToFind, const vector<string>& names)
 	else return false;
 }
 
+bool SearchScore(const int& scoreToFind, const vector<int>& scores)
+{
+	if (find(scores.begin(), scores.end(), scoreToFind) != scores.end())
+	{
+		return true;
+	}
+	else return false;
+}
+
 void InputScores(vector<string>& names, vector<int>& scores)
 {
 	cout << "Enter names and the corresponding scores(Enter noname and 0 to finish)" << endl;
