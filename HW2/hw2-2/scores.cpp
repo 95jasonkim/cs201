@@ -45,15 +45,15 @@ void InputScores(vector<string>& names, vector<int>& scores)
 		string s;
 		cout << "Enter the name: ";
 		getline(cin, name);
+		cout << "Enter the score: ";
+		getline(cin, s);
+		int score = stoi(s);
+		if (name == "noname" && score == 0)break;
 		if (SearchName(name, names) == 1)
 		{
 			cout << "ERROR: name already exists." << endl;
 			break;
 		}
-		cout << "Enter the score: ";
-		getline(cin, s);
-		int score = stoi(s);
-		if (name == "noname" && score == 0)break;
 		names.push_back(name);
 		scores.push_back(score);
 	}
