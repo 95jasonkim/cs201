@@ -15,7 +15,7 @@ using std::cin;
 using std::getline;
 using std::find;
 
-
+//Inputs 10 names from the user and stores in a string vector
 void InputNames(vector<string>& names)
 {
 	
@@ -26,8 +26,11 @@ void InputNames(vector<string>& names)
 		getline(cin, name);
 		names.push_back(name);
 	}
+
+	cout << endl;
 }
 
+//Searches vector for a name and returns true or false
 bool DoesNameExist(const string& nameToFind, const vector<string>& names)
 {
 	if (find(names.begin(), names.end(), nameToFind) != names.end())
@@ -37,6 +40,7 @@ bool DoesNameExist(const string& nameToFind, const vector<string>& names)
 	else return false;
 }
 
+//Prints the names in the vector
 void PrintNames(const vector<string>& names)
 {
 	for (int i = 0; i < names.size(); i++)
@@ -45,13 +49,23 @@ void PrintNames(const vector<string>& names)
 	}
 }
 
+//Makes all the names in the vector backwards
+void BackwardNames(vector<string>& names)
+{
+	for (int i = 0; i < names.size(); i++)
+	{
+		reverse(names[i].begin(), names[i].end());
+	}
+	cout << "All the names in the list are now backwards." << endl;
+}
+
 int main(int argc, char **argv)
 {
 	vector<string> names;
 	string nameToFind;
 	InputNames(names);
-	PrintNames(names);
-
-
+	//BackwardNames(names);
+	//PrintNames(names);
+	
 	return 0;
 }
