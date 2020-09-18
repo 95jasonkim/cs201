@@ -14,19 +14,20 @@ using std::endl;
 using std::cin;
 using std::getline;
 using std::find;
+using std::stoi;
 
-bool SearchName(const string& nameToFind, const vector<string>& names)
+bool SearchName(const string& name, const vector<string>& names)
 {
-	if (find(names.begin(), names.end(), nameToFind) != names.end())
+	if (find(names.begin(), names.end(), name) != names.end())
 	{
 		return true;
 	}
 	else return false;
 }
 
-bool SearchScore(const int& scoreToFind, const vector<int>& scores)
+bool SearchScore(const int& score, const vector<int>& scores)
 {
-	if (find(scores.begin(), scores.end(), scoreToFind) != scores.end())
+	if (find(scores.begin(), scores.end(), score) != scores.end())
 	{
 		return true;
 	}
@@ -39,29 +40,38 @@ void InputScores(vector<string>& names, vector<int>& scores)
 	while (true)
 	{
 		string name;
-		int score;
+		string s;
 		cout << "Enter the name: ";
 		getline(cin, name);
-		if (SearchName(name, names) == 0)
+		/*if (SearchName(name, names) == 0)
 		{
 			cout << "ERROR: name already exists." << endl;
 			break;
-		}
+		}*/
 		cout << "Enter the score: ";
-		cin >> score;
+		getline(cin, s);
+		int score = stoi(s);
 		if (name == "noname" && score == 0)break;
 		names.push_back(name);
 		scores.push_back(score);
-
 	}
+	cout << endl;
 }
 
+void Print(const vector<string>& names, const vector<int>& scores)
+{
+	for (int i = 0; i < names.size(); i++)
+	{
+		cout << "Name: " << names[i] << " Score: " << scores[i] << endl;
+	}
+}
 
 int main()
 {
 	vector<string> names;
 	vector<int> scores;
 	InputScores(names,scores);
+	Print(names, scores);
 
 	return 0;
 }
