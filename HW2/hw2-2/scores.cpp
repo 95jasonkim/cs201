@@ -43,11 +43,11 @@ void InputScores(vector<string>& names, vector<int>& scores)
 		string s;
 		cout << "Enter the name: ";
 		getline(cin, name);
-		/*if (SearchName(name, names) == 0)
+		if (SearchName(name, names) == 1)
 		{
 			cout << "ERROR: name already exists." << endl;
 			break;
-		}*/
+		}
 		cout << "Enter the score: ";
 		getline(cin, s);
 		int score = stoi(s);
