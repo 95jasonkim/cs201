@@ -39,7 +39,10 @@ bool DoesNameExist(const string& nameToFind, const vector<string>& names)
 
 void PrintNames(const vector<string>& names)
 {
-
+	for (int i = 0; i < names.size(); i++)
+	{
+		cout << names[i] << endl;
+	}
 }
 
 int main(int argc, char **argv)
@@ -47,7 +50,7 @@ int main(int argc, char **argv)
 	vector<string> names;
 	string nameToFind;
 	InputNames(names);
-	
+	PrintNames(names);
 
 
 	return 0;
