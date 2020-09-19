@@ -9,6 +9,8 @@ CS201 lab8 header
 using std::cout;
 using std::cin;
 using std::endl;
+#include<vector>
+using std::vector;
 
 int doInput();
 //asks user for input and tries to find an integer value and returns that value
