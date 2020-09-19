@@ -9,12 +9,11 @@ CS201 lab8
 
 int doInput()
 {
-	cout << "Enter an integer: " << endl;
 	return getInt();
 }
 
 int compute(int n)
 {
-
+	return n * n;
 }
 
