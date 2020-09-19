@@ -5,9 +5,15 @@ CS201 lab8 header
 */
 #ifndef LAB_EIGHT_HPP
 #define LAB_EIGHT_HPP
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
 
 int doInput();
+//asks user for input and tries to find an integer value and returns that value
 
-int compute();
+int compute(int value);
+//take the value and return its square value
 
 #endif

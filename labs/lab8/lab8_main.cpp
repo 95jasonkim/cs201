@@ -14,7 +14,6 @@
 
 #include "lab8.hpp"
 // For doInput, compute
-#include <iostream>
 using std::cout;
 using std::endl;
 using std::cin;
