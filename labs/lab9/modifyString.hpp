@@ -21,4 +21,14 @@ using std::endl;
 */
 int modifyString(string& ref, int n);
 
+/*
+* For part two int passed by reference and string returned
+* Append an integer to a string
+* @param ref string to append integer to
+* @param n int squared and append to ref
+* return the resutling string
+*/
+string modifyStringTwo(string ref, int& n);
+
+
 #endif
