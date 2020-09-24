@@ -11,8 +11,26 @@ bool isDiv3(int n)
 	else return false;
 }
 
+bool isADivB(int a, int b)
+{
+	if (a % b == 0)return true;
+	else return false;
+}
+
+void printDiv(int a, int b)
+{
+	for (int i = 1; i <= a; i++)
+	{
+		if (isADivB(i,b))
+		{
+			cout << i << " is divisble by " << b << "." << endl;
+		}
+	}
+}
+
 int main()
 {
+	/*for loop for part one 
 	for (int i = 1; i <= 40; i++)
 	{
 		if (isDiv3(i))
@@ -20,5 +38,9 @@ int main()
 			cout << i << " is divisble by 3." << endl;
 		}
 	}
+	*/
+
+	printDiv(40, 3);
+
 	return 0;
 }
