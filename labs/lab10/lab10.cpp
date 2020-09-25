@@ -7,14 +7,16 @@ CS201 lab10
 
 bool isDiv3(int n)
 {
-	if (n % 3 == 0) return true;
-	else return false;
+	return n % 3 == 0;
+	//if (n % 3 == 0) return true;
+	//else return false;
 }
 
 bool isADivB(int a, int b)
 {
-	if (a % b == 0)return true;
-	else return false;
+	return a % b == 0;
+	//if (a % b == 0)return true;
+	//else return false;
 }
 
 void printDiv(int a, int b)
