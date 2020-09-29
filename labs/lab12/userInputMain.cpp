@@ -37,12 +37,23 @@ int main() {
 	std::cout << "----------------------Additional 1----------------------"
 			<< std::endl;
 	// TODO print only words >= 5
+	for (unsigned long i = 0; i < words.size(); ++i) {
+		if (words[i].size() >= 5)
+		{
+			std::cout << words[i] << ' ';
+		}
+	}
 
 	char c = 'x';
 	std::cout << std::endl;
 	std::cout << "----------------------Additional 2----------------------"
 			<< std::endl;
 	// TODO print only words containing char c
-
+	for (unsigned long i = 0; i < words.size(); ++i) {
+		if (hasChar(words[i],c))
+		{
+			std::cout << words[i] << ' ';
+		}
+	}
 	return 0;
 }

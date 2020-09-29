@@ -13,6 +13,7 @@
 #include <vector>
 #include <string>
 
+
 /**
  * REQUIRED
  * Add user strings to a string vector until the user types "end".
@@ -27,6 +28,6 @@ void getUserStrings(std::vector<std::string> & words);
  * @param c character to find
  * @return True if the string contains the character.
  */
-//bool hasChar(const std::string & str, const char & c);
+bool hasChar(const std::string & str, const char & c);
 
 #endif /* USERINPUT_HPP_ */
