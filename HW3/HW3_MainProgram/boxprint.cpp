@@ -27,8 +27,6 @@ int main()
 			}
 		}
 		boxer(word, box);
-		//cout << "word: " << word << " box: " << box;
 	}
-
 	return 0;
 }
