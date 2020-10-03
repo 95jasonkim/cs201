@@ -25,7 +25,7 @@ int main() {
 			<< std::endl;
 	//TODO Declare a vector of strings named "words"
 	vector<string> words {"one", "two", "three", "four", "five"};
-	for (auto n : words)
+	for (const auto& n : words)
 	{
 		cout << n << " ";
 	}
@@ -43,7 +43,7 @@ int main() {
 
 	//TODO print strings that had their first letter changed in vector
 
-	for (auto n : words)
+	for (const auto& n : words)
 	{
 		cout << n << " ";
 	}
@@ -57,7 +57,7 @@ int main() {
 	addUserStrings(words, "done");
 
 	//TODO Print the vector after adding words.
-	for (auto n : words)
+	for (const auto& n : words)
 	{
 		cout << n << " ";
 	}

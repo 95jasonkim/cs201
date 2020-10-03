@@ -14,7 +14,7 @@ void firstLetterChange(std::vector<std::string>& strVec, const char& c)
 	}
 }
 
-void addUserStrings(std::vector<std::string>& strVec, const std::string sentinel)
+void addUserStrings(std::vector<std::string>& strVec, const std::string& sentinel)
 {
 	while(true)
 	{
