@@ -9,7 +9,7 @@ using std::vector;
 
 int main()
 {
-	vector<string> words{ "69", "69a","6a9","abc","  68","\t11","68 69","0xA" };
+	vector<string> words{ "69", "69a","a69","abc","  68","\t11","68 69","0xA" };
 	for (auto num:words)
 	{
 		partOne(num);
