@@ -1,10 +1,8 @@
-// lookup.cpp  INCOMPLETE
-// Glenn G. Chappell
-// 23 Feb 2018
-//
-// For CS 201 Spring 2018
-// Look-up by Key
-
+/*
+Jason Kim
+CS201 lab16
+10/8/2020
+*/
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -29,6 +27,15 @@ bool sequentialSearch(vector<int> keys,
                   int thekey,
                   string & thevalue)
 {
+    for (int i = 0; i < keys.size(); i++)
+    {
+        if (keys[i] == thekey)
+        {
+            thevalue = values[i];
+            return true;
+        }
+    }
+    
     return false;  // DUMMY
     // TODO: Write this!
 }
@@ -106,6 +113,12 @@ int main()
         else
         {
             cout << "KEY not found" << endl;
+            cout << "Add new VALUE to add to that KEY: ";
+            string value;
+            getline(cin, value);
+            keys.push_back(thekey);
+            values.push_back(value);
+            cout << "New VALUE successfully added." << endl;
         }
         cout << endl;
     }
