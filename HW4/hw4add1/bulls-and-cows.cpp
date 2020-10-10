@@ -30,15 +30,27 @@ int bulls(const vector<int>& answer, const vector<int>& guess)
 }
 
 //returns the number of cows
+//does not return a correct value if multiple same intgers are guessed
 int cows(const vector<int>& answer, const vector<int>& guess)
 {
-	return 0;
+	int cow=0;
+	for (int i = 0; i < guess.size(); i++)
+	{
+		for (int j = 0; j < answer.size(); j++)
+		{
+			if (guess[i] == answer[j])
+			{
+				cow++;
+			}
+		}
+	}
+	return cow - bulls(answer, guess);
 }
 
 int main()
 {
 	vector<int> answer {1, 2, 3, 4};
-	cout << "Try to guess the 4 digit number! Enter a negative number to give up." << endl;
+	cout << "Try to guess the 4 digit number! Each digit is a different number. Enter a negative number to give up." << endl;
 	while (true)
 	{
 		cout << "Enter your guess: ";
