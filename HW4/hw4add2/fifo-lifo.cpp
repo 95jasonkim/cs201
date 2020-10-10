@@ -33,6 +33,13 @@ void LifoPush(vector<string>& container, const string& item)
 	container.push_back(item);
 }
 
+//saves the last item
+//then it pops that item from container
+void LifoPop(vector<string>& container, string& item)
+{
+	item = container[container.size()-1];
+	container.pop_back();
+}
 
 int main()
 {
