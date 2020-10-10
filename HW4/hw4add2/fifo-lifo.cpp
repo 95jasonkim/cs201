@@ -27,6 +27,13 @@ void FifoPop(vector<string>& container, string& item)
 	container.erase(container.begin() + 1);
 }
 
+//item is pushed to container
+void LifoPush(vector<string>& container, const string& item)
+{
+	container.push_back(item);
+}
+
+
 int main()
 {
 
