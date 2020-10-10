@@ -125,7 +125,15 @@ int main() {
 		// Make the parallel vectors associative dataset
 		cout << "Creating dataset ..." << endl;
 		// TODO CREATE DATASET HERE!!! *****************************
-
+		vector<int> keys;
+		vector<int> values;
+		int value;
+		for (int i = 1; i <= size; i++)
+		{
+			values.push_back(i * i);
+			keys.push_back(i);
+		}
+		
 
 		// *********************************************************
 		cout << "Dataset created" << endl;
@@ -142,6 +150,14 @@ int main() {
 		// Do searches
 		// TODO BINARY SEARCH HERE!!! ******************************
 
+		//For non-existing key
+		//auto binaryResult = binarySearch(keys, values, size + 1, value);
+
+		//For key at the end of the dataset
+		//auto binaryResult = binarySearch(keys, values, size, value);
+
+		//For key at the beginning of the dataset
+		//auto binaryResult = binarySearch(keys, values, 1, value);
 
 		// *********************************************************
 		timer = clock() - timer;
@@ -153,6 +169,14 @@ int main() {
 		timer = clock();
 		// TODO SEQUENTIAL SEARCH HERE!!! **************************
 
+		//For non-existing key
+		//auto sequentialResult = sequentialSearch(keys, values, size + 1, value);
+
+		//For key at the end of the dataset
+		//auto sequentialResult = sequentialSearch(keys, values, size, value);
+
+		//For key at the beginning of the dataset
+		//auto sequentialResult = sequentialSearch(keys, values, 1, value);
 
 		// *********************************************************
 		timer = clock() - timer;
