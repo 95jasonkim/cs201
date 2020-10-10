@@ -7,7 +7,6 @@ CS201 hw4 tokenizer.cpp
 
 bool ReadLine(string& str)
 {
-	cout << "Enter a line of text: ";
 	getline(cin, str);
 	return !str.empty();
 }
