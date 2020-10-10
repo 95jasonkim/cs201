@@ -11,3 +11,18 @@ bool ReadLine(string& str)
 	getline(cin, str);
 	return !str.empty();
 }
+
+unsigned StringToTokensWS(const string& input, vector<string>& tokens)
+{
+	istringstream in(input);
+	string token;
+	int count=0;
+	while (in)
+	{
+		in >> token;
+		tokens.push_back(token);
+		count++;
+	}
+	tokens.push_back("");
+	return count;
+}

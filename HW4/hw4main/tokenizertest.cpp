@@ -7,6 +7,5 @@ CS201 hw4 tokenizertest.cpp
 
 int main()
 {
-
-
+	
 }
