@@ -18,7 +18,15 @@ using std::istringstream;
 //returns the number of bulls
 int bulls(const vector<int>& answer, const vector<int>& guess)
 {
-	return 0;
+	int bull=0;
+	for (int i = 0; i < answer.size(); i++)
+	{
+		if (guess[i] == answer[i])
+		{
+			bull++;
+		}
+	}
+	return bull;
 }
 
 //returns the number of cows
