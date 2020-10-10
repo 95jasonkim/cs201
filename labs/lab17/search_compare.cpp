@@ -130,10 +130,10 @@ int main() {
 		int value;
 		for (int i = 1; i <= size; i++)
 		{
-			values.push_back(i * i);
 			keys.push_back(i);
 		}
-		
+		values = keys;
+			
 
 		// *********************************************************
 		cout << "Dataset created" << endl;
@@ -151,7 +151,7 @@ int main() {
 		// TODO BINARY SEARCH HERE!!! ******************************
 
 		//For non-existing key
-		//auto binaryResult = binarySearch(keys, values, size + 1, value);
+		auto binaryResult = binarySearch(keys, values, size + 1, value);
 
 		//For key at the end of the dataset
 		//auto binaryResult = binarySearch(keys, values, size, value);
@@ -170,7 +170,7 @@ int main() {
 		// TODO SEQUENTIAL SEARCH HERE!!! **************************
 
 		//For non-existing key
-		//auto sequentialResult = sequentialSearch(keys, values, size + 1, value);
+		auto sequentialResult = sequentialSearch(keys, values, size + 1, value);
 
 		//For key at the end of the dataset
 		//auto sequentialResult = sequentialSearch(keys, values, size, value);
