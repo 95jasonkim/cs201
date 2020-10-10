@@ -19,8 +19,11 @@ unsigned StringToTokensWS(const string& input, vector<string>& tokens)
 	while (in)
 	{
 		in >> token;
-		tokens.push_back(token);
-		count++;
+		if (in)
+		{
+			tokens.push_back(token);
+			count++;
+		}
 	}
 	tokens.push_back("");
 	return count;
