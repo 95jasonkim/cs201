@@ -41,6 +41,11 @@ void LifoPop(vector<string>& container, string& item)
 	container.pop_back();
 }
 
+// returns true if container is empty
+bool isContainerEmpty(const vector<string>& container)
+{
+	return container.empty();
+}
 int main()
 {
 
