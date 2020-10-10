@@ -13,10 +13,18 @@ using std::getline;
 #include<vector>
 using std::vector;
 
-//pushes @param item to @param container
+//item is pushed to container
 void FifoPush(vector<string>& container, const string& item)
 {
 	container.push_back(item);
+}
+
+//saves the first item
+//then it pops that item from container
+void FifoPop(vector<string>& container, string& item)
+{
+	item = container[0];
+	container.erase(container.begin() + 1);
 }
 
 int main()
