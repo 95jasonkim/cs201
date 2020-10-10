@@ -31,5 +31,11 @@ returns number of tokens found
 */
 unsigned StringToTokensWS(const string& input, vector<string>& tokens);
 
+/*
+determines each of the tokens 
+and prints each type and value
+*/
+void AnalyzeTokens(const vector<string>& tokens);
+
 #endif // !TOKENIZER_HPP
 
