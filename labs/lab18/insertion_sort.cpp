@@ -12,6 +12,31 @@
 void insertionSort(std::vector<int> & data) {
 	// TODO Write the code for insertionSort
 
+	for (int i=1;i<data.size();i++)
+	{
+		int temp;
+		if (data[i] < data[i - 1])
+		{
+			temp = data[i];
+			for (int j = i; j > 0; j--)
+			{
+				if (data[j-1] > temp)
+				{
+					data[j] = data[j - 1];
+				}
+				else
+				{
+					data[j] = temp;
+					break;
+				}
+			}
+			if (data[0] == data[1])
+			{
+				data[0] = temp;
+			}
+		}
+		
+	}
 //	1. For each element, with the second element as the current element
 //	2. If the previous element is bigger than the current element
 //	3. Temporarily save the current element
