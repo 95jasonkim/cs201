@@ -16,12 +16,17 @@
 #include "insertion_sort.hpp"
 
 int main() {
-	std::vector<int> original = { 52, 12, 37, 34, 15, 10, 16, 26, 18, 20, 29,
-			30, 34, 50, 16, 25 };
-
+	//std::vector<int> original = { 52, 12, 37, 34, 15, 10, 16, 26, 18, 20, 29,	30, 34, 50, 16, 25 };
+	std::vector<int> original;
+	int size = 10000; //takes about 2~3 seconds
+	for(int i = size; i > 0; i--)
+	{
+		original.push_back(i);
+	}
+	std::cout << "Vector Created." << std::endl;
 	// your unsorted original
-	std::cout << "Original vector:" << std::endl;
-	printVector(original);
+	//std::cout << "Original vector:" << std::endl;
+	//printVector(original);
 	std::cout << std::endl << std::endl;
 
 	// make a copy and sort the vector using the STL for comparison
@@ -29,6 +34,7 @@ int main() {
 	std::sort(sorted.begin(), sorted.end());
 
 	// start timer
+	std::cout << "Vector Sorting..." << std::endl;
 	clock_t timer = clock();
 
 	// call your sort function
@@ -38,13 +44,13 @@ int main() {
 	timer = clock() - timer;
 
 	// STL sorted vector
-	std::cout << "Sorted vector:" << std::endl;
-	printVector(sorted);
+	//std::cout << "Sorted vector:" << std::endl;
+	//printVector(sorted);
 	std::cout << std::endl << std::endl;
 
 	// your sorted original
-	std::cout << "Your vector:" << std::endl;
-	printVector(original);
+	//std::cout << "Your vector:" << std::endl;
+	//printVector(original);
 	std::cout << std::endl << std::endl;
 
 	// does it match STL sorted vector?
