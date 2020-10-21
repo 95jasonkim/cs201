@@ -28,4 +28,7 @@
  */
 std::vector<double> degreesToRadians(int degree);
 
+
+void print(const std::vector<double>& radians);
+
 #endif /* FLOATING_POINT_HPP_ */
