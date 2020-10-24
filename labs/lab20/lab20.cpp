@@ -29,8 +29,8 @@ int main()
 {
 	for (size_t i = 0; i <= 180; i+=5)
 	{
-		//printCos(i);
-		printExp(i);
+		printCos(i);
+		//printExp(i);
 	}
 
 }
