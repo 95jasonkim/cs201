@@ -37,6 +37,13 @@ pair<bool, size_t>
     sequentialSearch(const vector<pair<int, string>> kvpairs,
                      int thekey)
 {
+    for (size_t i = 0; i < kvpairs.size();i++)
+    {
+        if (kvpairs[i].first == thekey)
+        {
+            return {true, i};
+        }
+    }
    return {false, 0};  // DUMMY
     // TODO: Write this!
 }
@@ -104,6 +111,11 @@ int main()
         else
         {
             cout << "KEY not found" << endl;
+            cout << "Enter new VALUE to add to KEY: ";
+            string value;
+            getline(cin, value);
+            kvpairs.push_back({ thekey,value });
+            cout << "VALUE successfully added" << endl;
         }
         cout << endl;
     }
