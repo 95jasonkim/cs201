@@ -14,6 +14,7 @@
 #define FILE_TRUNCSTRUCT_HPP_INCLUDED
 
 #include <string>
+using std::string;
 
 /**
  * Holds string and info about its length.
