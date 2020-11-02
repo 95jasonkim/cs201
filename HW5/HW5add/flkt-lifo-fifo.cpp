@@ -57,6 +57,14 @@ void popF(Fl_Widget* b, void* v)
 	print(items);
 }
 
+void popL(Fl_Widget* b, void* v)
+{
+	Fl_Button* t = (Fl_Button*)b;
+	Fl_Box* items = (Fl_Box*)v;
+	string item;
+	LifoPop(container, item);
+	print(items);
+}
 
 int main()
 {
@@ -73,6 +81,7 @@ int main()
 	push->callback(pushItem,items);
 	quit->callback(exit);
 	fifoPop->callback(popF,items);
+	lifoPop->callback(popL, items);
 	window->end();
 	print(items);
 	window->show();
