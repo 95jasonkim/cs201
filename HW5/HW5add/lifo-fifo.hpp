@@ -6,7 +6,6 @@ lifo-fifo.hpp
 #include<string>
 using std::stoi;
 using std::string;
-using std::getline;
 #include<vector>
 using std::vector;
 
