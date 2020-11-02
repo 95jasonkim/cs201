@@ -44,9 +44,15 @@ void pushItem(Fl_Widget* b, void* v)
 	Fl_Button* t = (Fl_Button*)b;
 	Fl_Box* items = (Fl_Box*)v;
 	Fl_Input* in = (Fl_Input*)b->parent()->child(0);
-	container.push_back(in->value());
+	LifoPush(container, in->value());
 	print(items);
 }
+
+void popF(Fl_Widget* b, void* v)
+{
+
+}
+
 
 int main()
 {
