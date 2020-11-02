@@ -39,6 +39,14 @@ void print(Fl_Widget* box)
 	item->copy_label(c);
 }
 
+void pushItem(Fl_Widget* b, void* v)
+{
+	Fl_Button* t = (Fl_Button*)b;
+	Fl_Box* items = (Fl_Box*)v;
+	Fl_Input* in = (Fl_Input*)b->parent()->child(0);
+	container.push_back(in->value());
+	print(items);
+}
 
 int main()
 {
