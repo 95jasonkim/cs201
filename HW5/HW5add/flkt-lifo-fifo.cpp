@@ -50,7 +50,11 @@ void pushItem(Fl_Widget* b, void* v)
 
 void popF(Fl_Widget* b, void* v)
 {
-
+	Fl_Button* t = (Fl_Button*)b;
+	Fl_Box* items = (Fl_Box*)v;
+	string item;
+	FifoPop(container, item);
+	print(items);
 }
 
 
@@ -68,6 +72,7 @@ int main()
 	Fl_Button* quit = new Fl_Button(550, 400, 100, 55, "Quit");
 	push->callback(pushItem,items);
 	quit->callback(exit);
+	fifoPop->callback(popF,items);
 	window->end();
 	print(items);
 	window->show();
