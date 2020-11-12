@@ -23,7 +23,16 @@ int RandomBetween(int first, int last)
 	return dist(gen);
 }
 
-
+int RandomBetweenN(int first, int last)
+{
+	int mean = (first + last) / 2; 
+	//the mean for the normal deviation is the average of the two ints
+	int deviation = (mean - first) / 3; 
+	// the standard deviation is one third the distance from the mean to the edge
+	// so only 0.1% on both sides would be outside the boundary
+	normal_distribution<int> ndist(mean,deviation);
+	return ndist(gen);
+}
 
 int main()
 {
