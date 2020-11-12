@@ -34,6 +34,15 @@ string getInput()
 	return input;
 }
 
+void printHelp()
+{
+	cout << "help // lists available commands" << endl;
+	cout << "cart // brings up your cart" << endl;
+	cout << "add // choose an item to add to the cart" << endl;
+	cout << "remove // choose an item to remove from your cart" << endl;
+	cout << "buy // finish shopping and go to purchase" << endl;
+}
+
 
 int main()
 {
