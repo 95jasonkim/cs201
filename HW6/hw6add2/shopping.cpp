@@ -6,26 +6,31 @@ CS201 hw6 shopping
 #include<iostream>
 #include<map>
 #include<numeric>
-#include<string>
+#include<iomanip>
+#include<string> 
+using std::pair;
 using std::string;
 using std::map;
 using std::cout;
 using std::endl;
 using std::cin;
 using std::getline;
+using std::accumulate;
 
 struct Record {
 	double unitPrice;
 	int units;
 };
 
-map<Record, string> stock{
-		{{2.49,13},"Pepsi"},
-		{{50.00,13},"Giftcard"},
-		{{99.99,13},"Calculator"},
-		{{1.99,13},"Notebook"},
-		{{0.99,13},"Pen"}
+map<string, Record> stock{
+		{"Pepsi",{2.49,13}},
+		{"Giftcard",{50.00,13}},
+		{"Calculator",{99.99,13}},
+		{"Notebook",{1.99,13}},
+		{"Pen",{0.99,13}}
 };
+
+map<string, Record> cart;
 
 string getInput()
 {
@@ -43,6 +48,16 @@ void printHelp()
 	cout << "buy // finish shopping and go to purchase" << endl;
 }
 
+double priceTotal(const map<string, Record>& list)
+{
+	double total=0.0;
+	for (auto [k, v] : list)
+	{
+		total += v.units * v.unitPrice;
+	}
+	return total;
+}
+
 
 int main()
 {
@@ -50,11 +65,33 @@ int main()
 	cout << "Welcome to our store! Type in \"\help\"\ to find the list of commands." << endl;
 	while (true)
 	{
-		cout << "Type in a command!";
+		cout << "Type in a command!" << endl;
 		input = getInput();
+		cout << endl;
 		if (input == "help")
 		{
-			//printHelp();
+			printHelp();
 		}
+		else if (input == "cart")
+		{
+			if (cart.empty())
+			{
+				cout << "Your cart is empty." << endl;
+			}
+			else
+			{
+				cout << "Your cart has: " << endl;
+				for (auto [k,v] : cart)
+				{
+					cout << k << "($"<<v.unitPrice<<"): " << v.units << endl;
+				}
+				cout << "The total is: $" << std::fixed<< std::setprecision(2)<< priceTotal(cart) << endl;
+			}
+		}
+		else
+		{
+			cout<<"Error: could not find corresponding command." << endl;
+		}
+		cout << endl;
 	}
 }
