@@ -25,11 +25,11 @@ struct Record {
 };
 
 map<string, Record> stock{
-		{"Pepsi",{2.49,13}},
-		{"Giftcard",{50.00,13}},
-		{"Calculator",{99.99,13}},
-		{"Notebook",{1.99,13}},
-		{"Pen",{0.99,13}}
+		{"Pepsi",{2.49,110}},
+		{"Giftcard",{50.00,11}},
+		{"Calculator",{99.99,5}},
+		{"Notebook",{1.99,50}},
+		{"Pen",{0.99,44}}
 };
 
 map<string, Record> cart;
@@ -124,6 +124,7 @@ int main()
 					{
 						cart[item].units += num;
 						stock[item].units -= num;
+						cart[item].unitPrice = stock[item].unitPrice;
 						cout << "Item successfully added!" << endl;
 					}
 				}
@@ -170,7 +171,23 @@ int main()
 		}
 		else if (input == "buy")
 		{
-
+			if (cart.empty())
+			{
+				cout << "Your cart is empty." << endl;
+			}
+			else
+			{
+				cout << "Your cart has: " << endl;
+				printMap(cart);
+				cout << "The total is: $" << std::fixed << std::setprecision(2) << priceTotal(cart) << endl;
+				cout << "Would you like to finish and pay?(yes or no)" << endl;
+				input = getInput();
+				if (input == "yes")
+				{
+					cout << "Thank you for your service!" << endl;
+					break;
+				}
+			}
 		}
 		else
 		{
