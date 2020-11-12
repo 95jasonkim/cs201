@@ -9,6 +9,10 @@ CS201 hw6 shopping
 #include<string>
 using std::string;
 using std::map;
+using std::cout;
+using std::endl;
+using std::cin;
+using std::getline;
 
 struct Record {
 	double unitPrice;
@@ -23,8 +27,25 @@ map<Record, string> stock{
 		{{0.99,13},"Pen"}
 };
 
+string getInput()
+{
+	string input;
+	getline(cin, input);
+	return input;
+}
+
+
 int main()
 {
-	
-
+	string input;
+	cout << "Welcome to our store! Type in \"\help\"\ to find the list of commands." << endl;
+	while (true)
+	{
+		cout << "Type in a command!";
+		input = getInput();
+		if (input == "help")
+		{
+			//printHelp();
+		}
+	}
 }
