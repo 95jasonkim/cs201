@@ -71,9 +71,11 @@ int main()
 		++normal[RandomBetweenN(1,10)];
 		++rand[RandBetween(1,10)];
 	}
-
+	cout << "The uniform distribution of random numbers from 1 to 10, each \"\*\"\ represents 100 datapoints" <<'\n'<< endl;
 	PrintDistribution(uniform);
+	cout << "The normal distribution of random numbers from 1 to 10, each \"\*\"\ represents 100 datapoints" << '\n' << endl;
 	PrintDistribution(normal);
+	cout << "The use of rand() for random numbers from 1 to 10, each \"\*\"\ represents 100 datapoints" << '\n' << endl;
 	PrintDistribution(rand);
 }
 
