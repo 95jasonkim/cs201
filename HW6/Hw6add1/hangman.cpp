@@ -45,8 +45,7 @@ int main()
 		guess += "-";
 	}
 	map<char, int> abc;
-	vector<string> chances{ "head","body","right arm","left arm",
-		"right leg","left leg","right hand","left hand","right foot","left foot" };
+	int chances = 10;
 	cout << "Play Hangman! You have 10 guesses." << '\n'<<endl;
 	cout << guess << endl;
 	while (true)
@@ -61,7 +60,28 @@ int main()
 		auto ind = tryGuess(answer, g);
 		if (ind.empty())
 		{
-
+			chances--;
+			if (chances == 0)
+			{
+				cout << "Wrong answer, you have died." << endl;
+				break;
+			}
+			cout << "Wrong answer, you have " << chances << " chances left." << endl;
 		}
+		else
+		{
+			for (auto i : ind)
+			{
+				guess[i] = g;
+			}
+		}
+		cout << guess << '\n' << endl;
+		if (guess == answer)
+		{
+			cout << "You are correct!" << endl;
+			break;
+		}
+
+
 	}
 }
