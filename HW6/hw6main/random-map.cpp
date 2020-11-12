@@ -31,13 +31,13 @@ int RandomBetween(int first, int last)
 
 int RandomBetweenN(int first, int last)
 {
-	int mean = (first + last) / 2; 
+	double mean = (first + last) / 2; 
 	//the mean for the normal deviation is the average of the two ints
 	double deviation = (mean - first) / 3; 
 	// the standard deviation is one third the distance from the mean to the edge
 	// so only 0.1% on both sides would be outside the boundary
 	normal_distribution<> ndist(mean,deviation);
-	return ndist(gen);
+	return std::round(ndist(gen));
 }
 
 int RandBetween(int first, int last)
@@ -49,9 +49,31 @@ int RandBetween(int first, int last)
 	return result;
 }
 
+void PrintDistribution(const map<int, int>& numbers)
+{
+	for (auto [k, v] : numbers)
+	{
+		cout << std::setw(2) << k << " " << std::string(v / 100, '*') << endl;
+	}
+	cout << endl;
+}
+
 int main()
 {
 	std::srand(std::time(nullptr));
+	map<int, int> uniform;
+	map<int, int> normal;
+	map<int, int> rand;
+	//10 thousand data points for each random function
+	for (int i = 0; i < 10000; i++)
+	{
+		++uniform[RandomBetween(1,10)];
+		++normal[RandomBetweenN(1,10)];
+		++rand[RandBetween(1,10)];
+	}
 
+	PrintDistribution(uniform);
+	PrintDistribution(normal);
+	PrintDistribution(rand);
 }
 
