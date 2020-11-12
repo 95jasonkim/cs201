@@ -58,6 +58,13 @@ double priceTotal(const map<string, Record>& list)
 	return total;
 }
 
+void printMap(const map<string, Record>& list)
+{
+	for (auto [k, v] : list)
+	{
+		cout << k << "($" << v.unitPrice << "): " << v.units << endl;
+	}
+}
 
 int main()
 {
@@ -81,12 +88,22 @@ int main()
 			else
 			{
 				cout << "Your cart has: " << endl;
-				for (auto [k,v] : cart)
-				{
-					cout << k << "($"<<v.unitPrice<<"): " << v.units << endl;
-				}
+				printMap(cart);
 				cout << "The total is: $" << std::fixed<< std::setprecision(2)<< priceTotal(cart) << endl;
 			}
+		}
+		else if (input == "add")
+		{
+			cout << "This is our current stock: " << endl;
+
+		}
+		else if (input == "remove")
+		{
+
+		}
+		else if (input == "buy")
+		{
+
 		}
 		else
 		{
