@@ -10,6 +10,8 @@ asciiart.cpp
 int main()
 {
 	string path = "parrot.ppm";
-	Image3 pic = openPPM(path);
-
+	auto p = openPPM(path);
+	Image3 pic(p.first, p.second);
+	pic.loadPPM(path);
+	pic.printASCII();
 }

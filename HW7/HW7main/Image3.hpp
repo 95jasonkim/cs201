@@ -23,22 +23,18 @@ using std::istringstream;
 class Image3
 {
 public:
-	Image3(unsigned width, unsigned height);
+	Image3(int width, int height);
 	
-	const Color3& getPixel(unsigned x, unsigned y) const;
-	void setPixel(unsigned x, unsigned y, const Color3& color);
+	
 
-	bool savePPM(const std::string& path) const;
 	bool loadPPM(const std::string& path);
 
-	void printASCII(std::ostream& ostr) const;
+	void printASCII() const;
 
 	std::vector<Color3> pixels;
-	unsigned w;
-	unsigned h;
-	Color3 borderColor;
+	int w;
+	int h;
 };
 
-std::ostream& operator<<(std::ostream& ostr, const Image3& image);
-const Image3& openPPM(string path);
+std::pair<int, int> openPPM(string path);
 #endif
