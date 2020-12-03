@@ -7,7 +7,10 @@
 // Image3 Constructor
 Image3::Image3(unsigned width, unsigned height) {
 	// TODO: resize the pixels array
+	pixels.resize(80*80);
 	// TODO: initialize the internal w and h members
+	w = width;
+	h = height;
 }
 
 // Return a pixel from the image
@@ -22,6 +25,7 @@ const Color3& Image3::getPixel(unsigned x, unsigned y) const {
 
 void Image3::setPixel(unsigned x, unsigned y, const Color3& color) {
 	// TODO: Set the pixel to the new color
+	
 }
 
 bool Image3::savePPM(const std::string& path) const {
