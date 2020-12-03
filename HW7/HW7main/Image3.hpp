@@ -6,8 +6,19 @@
 #define IMAGE3_CPP
 
 #include <iostream>
+#include<string>
+using std::string;
+using std::getline;
+using std::cout;
+using std::endl;
+using std::stoi;
 #include <vector>
+#include<fstream>
+using std::ifstream;
 #include "Color3.hpp"
+#include<sstream>
+using std::istringstream;
+
 
 class Image3
 {
@@ -29,6 +40,5 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& ostr, const Image3& image);
-std::istream& operator>>(std::istream& istr, Image3& image);
-
+const Image3& openPPM(string path);
 #endif

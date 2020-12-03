@@ -9,5 +9,7 @@ asciiart.cpp
 
 int main()
 {
+	string path = "parrot.ppm";
+	Image3 pic = openPPM(path);
 
 }

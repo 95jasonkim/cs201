@@ -36,12 +36,37 @@ bool Image3::savePPM(const std::string& path) const {
 
 bool Image3::loadPPM(const std::string& path) {
 	// TODO: Load an image from the disk
+	ifstream stream(path);
+	if (!stream) cout << "Cannot open file." << endl;
+	else
+	{
+		while (true)
+		{
+			string filler;
+			getline(stream, filler);
+			if (stoi(filler) == 255)break;
+		}
+		int pixel = 0;
+		while (true)
+		{
+			if (!stream)break;
+			string r;
+			string g;
+			string b;
+			getline(stream, r);
+			getline(stream, g);
+			getline(stream, b);
+			pixels[pixel] = Color3(stoi(r), stoi(g), stoi(b));
+			pixel++;
+		}
+	}
 	// REQUIREMENT: Use the STREAM operators for the file contents
 	return false;
 }
 
 void Image3::printASCII(std::ostream& ostr) const {
 	// TODO: Print an ASCII version of this image
+
 }
 
 // STREAM OPERATORS for IMAGE3 class
@@ -52,8 +77,25 @@ std::ostream& operator<<(std::ostream& ostr, const Image3& image) {
 	return ostr;
 }
 
-std::istream& operator>>(std::istream& istr, Image3& image) {
+const Image3& openPPM(string path) {
 	// TODO: Read in PPM image format from stream
-	// MAKE SURE FORMAT IS GOOD!!!
-	return istr;
+	ifstream stream(path);
+	if (!stream) cout << "Cannot open file." << endl;
+	else
+	{
+		while (true)
+		{
+			string filler;
+			getline(stream, filler);
+			if (isdigit(filler[0]))
+			{
+				istringstream sstream(filler);
+				int width;
+				int height;
+				sstream >> width;
+				sstream >> height;
+				return Image3(width, height);
+			}
+		}
+	}
 }

@@ -25,7 +25,5 @@ public:
 	unsigned char b;
 };
 
-std::ostream& operator<<(std::ostream& ostr, const Color3& color);
-std::istream& operator>>(std::istream& istr, Color3& color);
 
 #endif

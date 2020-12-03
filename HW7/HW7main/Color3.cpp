@@ -38,16 +38,3 @@ char Color3::asciiValue() const {
 	return values[darkness];
 }
 
-// Stream Operators for input and output
-
-std::ostream& operator<<(std::ostream& ostr, const Color3& color) {
-	ostr << setw(3) << (int)color.r << " ";
-	ostr << setw(3) << (int)color.g << " ";
-	ostr << setw(3) << (int)color.b << " ";
-	return ostr;
-}
-
-std::istream& operator>>(std::istream& istr, Color3& color) {
-	// Implement your own input for a Color3
-	return istr;
-}
