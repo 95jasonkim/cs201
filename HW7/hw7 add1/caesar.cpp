@@ -36,7 +36,23 @@ int getShift()
 
 string caesar(string line, int shift)
 {
-
+	string result="";
+	for (const auto c : line)
+	{
+		if (isupper(c))
+		{
+			result += (c + shift - 65) % 26 + 65;
+		}
+		else if(islower(c))
+		{
+			result += (c + shift - 97) % 26 + 97;
+		}
+		else
+		{
+			result += c;
+		}
+	}
+	return result;
 }
 
 
@@ -49,6 +65,6 @@ int main(int argc, char** argv)
 		line = getLine();
 		int shift = getShift();
 		cout << endl;
-		
+		cout << "Result: " << caesar(line, shift) << endl;
 	}
 }
