@@ -78,9 +78,9 @@ int main()
 	cout << "Creating array of size " << bsize << "..." << endl;
 	for (int i = 0; i < bsize; i++)
 	{
-		barr[i] = i;
+		//barr[i] = i;
 		//barr[i] = bsize-i;
-		// for these two extreme cases where the array is already sorted, or is reversed, than the quicksort takes impossibly long.
+		// for these two extreme cases where the array is already sorted, or is reversed, than the quicksort takes very long.
 		barr[i] = num(gen); // takes about 0.35 seconds with 1 million random numbers
 	}
 	// start timer
