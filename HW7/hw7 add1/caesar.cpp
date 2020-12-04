@@ -10,6 +10,9 @@ using std::endl;
 #include<string>
 using std::string;
 using std::getline;
+using std::stoi;
+#include<sstream>
+using std::istringstream;
 
 string getLine()
 {
@@ -26,11 +29,14 @@ int getShift()
 	{
 		string line;
 		getline(cin, line);
-		if (isdigit(line[0])) return std::stoi(line);
-		else
+		istringstream os(line);
+		int value;
+		os >> value;
+		if(!os)
 		{
 			cout << "Please enter an integer: ";
 		}
+		else return value;
 	}
 }
 
