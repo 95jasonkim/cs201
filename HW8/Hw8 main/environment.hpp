@@ -12,7 +12,9 @@ public:
 	Environment(double temperature = 20.0, bool heater=true): _temperature{temperature}, _heater{heater}
 	{}
 
-private:
+	void iteration();
+
+
 	double _temperature;
 	bool _heater;
 };
