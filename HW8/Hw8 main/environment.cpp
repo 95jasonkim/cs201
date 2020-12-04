@@ -1,7 +1,7 @@
 /*
 Jason Kim
 CS201 hw8 main
-thermostat.cpp
+environment.cpp
 */
 
 #include "agent.hpp"
