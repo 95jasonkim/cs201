@@ -11,11 +11,11 @@ using std::string;
 class Student {
 public:
 	//constructors
-	Student() : _name{"John Doe"}, _id{0}
-	{}
-	Student(string name) : _name{ name }, _id{ 0 } 
-	{}
-	Student(string name, int id): _name{name}, _id{id}
+//	Student() : _name{"John Doe"}, _id{0}
+//	{}
+//	Student(string name) : _name{ name }, _id{ 0 } 
+//	{}
+	Student(string name="John Doe", int id=0): _name{name}, _id{id}
 	{}
 	void printInfo() const;
 private:
