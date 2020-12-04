@@ -60,9 +60,10 @@ int main(int argc, char** argv)
 {
 	cout << "Caesar Cypher" <<'\n'<< endl;
 	string line="text";
-	while (!line.empty())
+	while (true)
 	{
 		line = getLine();
+		if (line == "")break;
 		int shift = getShift();
 		cout << endl;
 		cout << "Result: " << caesar(line, shift) << endl;
