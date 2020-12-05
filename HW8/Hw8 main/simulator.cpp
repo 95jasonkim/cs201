@@ -10,9 +10,17 @@ simulator.hpp
 
 void Simulator::run()
 {
+	cout << "Simulation running..." << endl;
 	_env.iteration();
+	cout << "Heater is ";
+	if (_env._heater) cout << "on..." << endl;
+	else cout << "off..." << endl;
 	_agent.perceive(_env);
-	_agent.act(_env);
+	cout << "Environment temperature is " << _env._temperature << endl;
+	_agent.act(_env); 
+	cout << "Heater is now ";
+	if (_env._heater) cout << "on..." << endl;
+	else cout << "off..." << endl;
 	_count++;
 }
 

@@ -11,5 +11,8 @@ thermostat.cpp
 int main()
 {
 	Simulator sim;
+	while (true)
+	{
 
+	}
 }
