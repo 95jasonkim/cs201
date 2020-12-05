@@ -17,14 +17,14 @@ class Environment
 public:
 	Environment():_rooms{{0,0}}
 	{
-		num = uniform_int_distribution<int>(0, 1);
-		_gen = mt19937(ran());
+		_num = uniform_int_distribution<int>(0, 1);
+		gen = mt19937(ran());
 	}
 	void iteration();
 
-	uniform_int_distribution<int> num;
+	uniform_int_distribution<int> _num;
 	random_device ran;
-	mt19937 _gen;
+	mt19937 gen;
 	vector<int> _rooms;
 };
 
