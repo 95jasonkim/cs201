@@ -14,9 +14,11 @@ public:
 	Agent(pair<int, int> temprange = { 20, 25 }) :_temprange{temprange}
 	{}
 
-	void perceive(const Environment en);
+	void perceive(Environment en);
 
 	bool think();
+
+	void act(Environment& en);
 
 	pair<int, int> _temprange;
 	int _envtemp;
