@@ -12,3 +12,24 @@ void Agent::perceive(Environment en)
 {
 	_rooms = en._rooms;
 }
+
+//if current room is dirty cleans, otherwise checks the other room and moves there if it is dirty
+void Agent::think()
+{
+	
+		if (_rooms[_pos] == 1)
+		{
+			_clean = true;
+		}
+		else if (std::find(_rooms.begin(),_rooms.end(),1)!=_rooms.end())
+		{
+			auto it = std::find(_rooms.begin(), _rooms.end(), 1);
+			_pos = it - _rooms.begin();
+			_clean = false;
+		}
+		else
+		{
+			_clean = false;
+		}
+	
+}
