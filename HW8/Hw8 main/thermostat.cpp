@@ -13,6 +13,11 @@ int main()
 	Simulator sim;
 	while (true)
 	{
-
+		sim.run();
+		if (sim._count == 10)
+		{
+			sim.askOwner();
+			sim._count = 0;
+		}
 	}
 }

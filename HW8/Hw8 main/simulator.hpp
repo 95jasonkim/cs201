@@ -6,6 +6,9 @@ simulator.hpp
 
 #ifndef SIMULATOR_HPP
 #define SIMULATOR_HPP
+
+#include "agent.hpp"
+#include "environment.hpp"
 #include<iostream>
 using std::cout;
 using std::endl;

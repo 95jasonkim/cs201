@@ -3,8 +3,10 @@ Jason Kim
 CS201 hw8 main
 agent.hpp
 */
+
 #ifndef AGENT_HPP
 #define AGENT_HPP
+#include "environment.hpp"
 #include<iostream>
 using std::pair;
 
