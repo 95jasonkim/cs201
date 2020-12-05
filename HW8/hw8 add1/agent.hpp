@@ -8,4 +8,17 @@ agent.hpp
 #define AGENT_HPP
 #include "environment.hpp"
 
+class Agent
+{
+public:
+	Agent() :_pos{0}, _rooms{{0,0}}
+	{}
+	void perceive(Environment en);
+
+
+
+	vector<int> _rooms;
+	int _pos;
+};
+
 #endif
