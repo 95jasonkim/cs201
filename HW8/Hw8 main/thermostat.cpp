@@ -17,7 +17,11 @@ int main()
 		if (sim._count == 10)
 		{
 			sim.askOwner();
-			sim._count = 0;
+		}
+		if (sim._agent._temprange.first == sim._agent._temprange.second)
+		{
+			cout << "Simulation terminated." << endl;
+			break;
 		}
 	}
 }

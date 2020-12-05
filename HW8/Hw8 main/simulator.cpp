@@ -24,7 +24,7 @@ void Simulator::run()
 
 void Simulator::askOwner()
 {
-	cout << "What range of temperature would you like?" << endl;
+	cout << "What range of temperature would you like?(enter same numbers to terminate)" << endl;
 	cout << "From: ";
 	string temp;
 	getline(cin, temp);
@@ -33,5 +33,6 @@ void Simulator::askOwner()
 	getline(cin, temp2);
 	_agent._temprange = { stoi(temp),stoi(temp2) };
 	cout << endl;
+	_count = 0;
 }
 
