@@ -6,6 +6,13 @@ simulator.hpp
 
 #ifndef SIMULATOR_HPP
 #define SIMULATOR_HPP
+#include<iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+#include<string>
+using std::string;
+using std::stoi;
 
 class Simulator
 {
@@ -14,6 +21,8 @@ public:
 	{}
 
 	void run();
+
+	void askOwner();
 
 	int _count;
 	Environment _env;

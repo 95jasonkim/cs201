@@ -15,9 +15,8 @@ void Agent::perceive(Environment en)
 
 bool Agent::think()
 {
-	int midtemp = (_temprange.second + _temprange.first) / 2;
-	if (_envtemp < midtemp) return true;
-	else return false;
+	if (_envtemp < _temprange.first) return true;
+	else if(_envtemp>_temprange.second) return false;
 }
 
 void Agent::act(Environment& en)
