@@ -8,7 +8,7 @@ agent.cpp
 #include "environment.hpp"
 #include "simulator.hpp"
 
-double Agent::perceive(const Environment en)
+int Agent::perceive(const Environment en)
 {
 	return en._temperature;
 }

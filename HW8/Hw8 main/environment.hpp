@@ -9,13 +9,13 @@ environment.hpp
 class Environment
 {
 public:
-	Environment(double temperature = 20.0, bool heater=true): _temperature{temperature}, _heater{heater}
+	Environment(int temperature = 20.0, bool heater=true): _temperature{temperature}, _heater{heater}
 	{}
 
 	void iteration();
 
 
-	double _temperature;
+	int _temperature;
 	bool _heater;
 };
 

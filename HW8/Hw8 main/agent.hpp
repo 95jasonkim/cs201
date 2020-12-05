@@ -5,13 +5,19 @@ agent.hpp
 */
 #ifndef AGENT_HPP
 #define AGENT_HPP
+#include<iostream>
+using std::pair;
 
 class Agent
 {
 public:
+	Agent(pair<int, int> temprange = { 20, 25 }) :_temprange{temprange}
+	{}
 
-	double perceive(const Environment en);
+	int perceive(const Environment en);
 
+
+	pair<int, int> _temprange;
 };
 
 
