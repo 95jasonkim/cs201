@@ -19,6 +19,8 @@ public:
 
 	void think();
 
+	void act(Environment& en);
+
 	vector<int> _rooms;
 	int _pos;
 	bool _clean;

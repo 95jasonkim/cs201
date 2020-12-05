@@ -33,3 +33,12 @@ void Agent::think()
 		}
 	
 }
+
+// if _clean is true acts on the room it is in
+void Agent::act(Environment& en)
+{
+	if (_clean)
+	{
+		en._rooms[_pos] = 0;
+	}
+}
