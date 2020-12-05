@@ -9,5 +9,5 @@ vacuum.cpp
 
 int main()
 {
-	Environment env;
+	Simulator sim;
 }
