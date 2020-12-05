@@ -8,23 +8,23 @@ agent.cpp
 
 
 //gets information about environment dirtyness
-void Agent::perceive(Environment en)
+void Agent::perceive(Environment& en)
 {
-	_rooms = en._rooms;
+	_room = en._rooms;
 }
 
 //if current room is dirty cleans, otherwise checks the other room and moves there if it is dirty
 void Agent::think()
 {
 	
-		if (_rooms[_pos] == 1)
+		if (_room[_pos] == 1)
 		{
 			_clean = true;
 		}
-		else if (std::find(_rooms.begin(),_rooms.end(),1)!=_rooms.end())
+		else if (std::find(_room.begin(),_room.end(),1)!=_room.end())
 		{
-			auto it = std::find(_rooms.begin(), _rooms.end(), 1);
-			_pos = it - _rooms.begin();
+			auto it = std::find(_room.begin(), _room.end(), 1);
+			_pos = it - _room.begin();
 			_clean = false;
 		}
 		else

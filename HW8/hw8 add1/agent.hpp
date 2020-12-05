@@ -13,15 +13,17 @@ agent.hpp
 class Agent
 {
 public:
-	Agent() :_pos{0}, _rooms{{0,0}}, _clean{false}
+	Agent() :_pos{0}, _room{{0,0}}, _clean{false}
 	{}
-	void perceive(Environment en);
+
+
+	void perceive(Environment& en);
 
 	void think();
 
 	void act(Environment& en);
 
-	vector<int> _rooms;
+	vector<int> _room;
 	int _pos;
 	bool _clean;
 };
