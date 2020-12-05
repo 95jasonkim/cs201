@@ -16,7 +16,7 @@ public:
 
 	void perceive(Environment en);
 
-	bool think();
+	int think();
 
 	void act(Environment& en);
 

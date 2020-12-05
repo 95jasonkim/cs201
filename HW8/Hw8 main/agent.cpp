@@ -13,13 +13,21 @@ void Agent::perceive(Environment en)
 	_envtemp = en._temperature;
 }
 
-bool Agent::think()
+int Agent::think()
 {
-	if (_envtemp < _temprange.first) return true;
-	else if(_envtemp>_temprange.second) return false;
+	if (_envtemp < _temprange.first) return 1;
+	else if (_envtemp > _temprange.second) return -1;
+	else return 0;
 }
 
 void Agent::act(Environment& en)
 {
-	en._heater = think();
+	switch (think()) {
+	case 1:
+		en._heater = true;
+		break;
+	case -1:
+		en._heater = false;
+		break;
+	}
 }
